@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        :root {
+            --background: #9937e9;
+            ---color: #000;
+        }
+
+        /* COSTUM CSS START */
+
+        .new-font-family {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .w-90 {
+            max-width: 90%;
+        }
+
+        .border-radius {
+            border-radius: 25px;
+        }
+
+        .w-40 {
+            width: 40%;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .hero-section-light-color {
+            background-color: rgb(240, 224, 239);
+        }
+
+        h1 {
+            font-size: 55px;
+        }
+
+        .section-1 {
+            background: linear-gradient(30deg, white, white, white, white, rgb(239, 179, 233));
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .cv-button:hover {
+            border-color: var(--background);
+            color: var(--background);
+
+        }
+
+        /* COSTUM CSS END */
+
+        /* COLORS CSS START */
+
+
+
+        .purple-background {
+            background-color: var(--background);
+        }
+
+        .black-color {
+            color: var(---color);
+        }
+
+        /* .purple-text{
+            color: var(--background);
+        } */
+
+        /* COLORS CSS END */
+
+        /* TRANSITION CSS START */
+
+        .transition-sec {
+            transition: 0.9s;
+        }
+
+        /* TRANSITION CSS END */
+
+        /* HOVER CSS START */
+
+        .li-hover:hover {
+            background-color: rgba(0, 0, 0, 0.119);
+        }
+
+        .a-hover:hover {
+            color: var(--background);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.1);
+            background-color: rgb(106, 16, 147);
+        }
+
+        /* HOVER CSS END */
+
+        /* @media only screen and (min-width: 1900px) and (max-width: 2600px) {
+            body{
+                max-width: 50%;
+            }
+        } */
+
+        @media (max-width: 1200px) {
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="">
+    <header class="position-sticky top-0 bg-light ">
+        <nav class="navbar container py-2 px-3">
+            <div class="d-flex">
+                <h3 class="rounded-circle px-3 py-2 mx-2 my-1 purple-background text-light">B</h3>
+                <h2 class="py-1 mx-2 my-1 fw-bold new-font-family">Brooklyn</h2>
+            </div>
+            <div class="d-flex align-items-center">
+                <ul class="d-flex gap-2 list-unstyled mx-2 my-1">
+                    <li class="px-4 py-3 li-hover rounded-3"><a class="text-decoration-none black-color a-hover"
+                            href="">Home</a></li>
+                    <li class="px-4 py-3 li-hover rounded-3"><a class="text-decoration-none black-color a-hover"
+                            href="">About</a></li>
+                    <li class="px-4 py-3 li-hover rounded-3"><a class="text-decoration-none black-color a-hover"
+                            href="">Process</a></li>
+                    <li class="px-4 py-3 li-hover rounded-3"><a class="text-decoration-none black-color a-hover"
+                            href="">PortFolio</a></li>
+                    <li class="px-4 py-3 li-hover rounded-3"><a class="text-decoration-none black-color a-hover"
+                            href="">Blog</a></li>
+                    <li class="px-4 py-3 li-hover rounded-3"><a class="text-decoration-none black-color a-hover"
+                            href="">Services</a></li>
+                </ul>
+                <button class="px-4 py-3 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec"><a
+                        class="text-decoration-none text-white" href="">Contact</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section-1">
+        <div style="padding: 170px 0;"
+            class="container mx-auto d-flex justify-content-between flex-sm-column flex-lg-row">
+            <div class="w-50 d-flex justify-content-between flex-column new-font-family">
+                <div>
+                    <h1 style="margin-top: 20px;" class="lh-1 fw-bolder">Hello, I’m <br> Brooklyn Gilbert</h1>
+                    <p class="my-3">I'm a Freelance UI/UX Designer and Developer based in London, England. I strives to
+                        build immersive and beautiful web applications through carefully crafted code and user-centric
+                        design.</p>
+                    <button class="px-4 py-3 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec"><a
+                            class="text-decoration-none text-white" href="">Say Hello!</a></button>
+                </div>
+                <div class="d-flex justify-content-evenly">
+                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded">
+                        <h4 class="fw-bold">15 Y.</h4>
+                        <p class="fs-6 text-black-50">Experince</p>
+                    </span>
+                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded ">
+                        <h4 class="fw-bold">250+</h4>
+                        <p class="fs-6 text-black-50">Projects Completed</p>
+                    </span>
+                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded">
+                        <h4 class="fw-bold">58</h4>
+                        <p class="fs-6 text-black-50">Happy Clients</p>
+                    </span>
+                </div>
+            </div>
+            <div class="border-radius shadow-lg d-flex">
+                <img class="img-fluid" src="./images/my-picture.png" alt="">
+            </div>
+        </div>
+        <div class="container border-radius shadow-lg d-flex align-items-center flex-sm-column flex-lg-row">
+            <div class="m-5">
+                <img class="img-fluid" src="./images/my-img-2.png" alt="">
+            </div>
+            <div class="w-50">
+                <h2 class="fw-bold mt-4">I am Professional User <br> Experience Designer</h2>
+                <p class="mt-4 text-black-50">I design and develop services for customers specializing creating stylish,
+                    modern websites, web services and online stores. My passion is to design digital user experiences.
+                </p>
+                <p class="mt-3 text-black-50">I design and develop services for customers specializing creating stylish,
+                    modern websites, web services.</p>
+                <button class="px-4 py-3 mt-4 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
+                    <a class="text-decoration-none text-white" href="">My Projects </a></button>
+                <button class="px-4 py-2 mt-4 mx-3 fw-bold bg-white rounded-3 border cv-button"> <a
+                        class="black-color text-decoration-none cv-button" href=""> <i class="ri-download-2-line"></i> Download CV
+                    </a> </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
