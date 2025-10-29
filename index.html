@@ -79,9 +79,9 @@
             color: var(---color);
         }
 
-        /* .purple-text{
+        .purple-text {
             color: var(--background);
-        } */
+        }
 
         /* COLORS CSS END */
 
@@ -106,6 +106,15 @@
         .hover-scale:hover {
             transform: scale(1.1);
             background-color: rgb(106, 16, 147);
+        }
+
+        .card-button-hover:hover {
+            color: white;
+            background-color: var(--background);
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
         }
 
         /* HOVER CSS END */
@@ -188,12 +197,13 @@
                 <img class="w-100" src="./images/my-picture.png" alt="">
             </div>
         </div>
-        <div class="section-1-part-2 container border-radius shadow-lg d-flex align-items-center flex-sm-column flex-lg-row">
+        <div
+            class="section-1-part-2 container border-radius shadow-lg d-flex align-items-center flex-sm-column flex-lg-row">
             <div class="m-5">
                 <img class="img-fluid" src="./images/my-img-2.png" alt="">
             </div>
             <div class="col-12 col-lg-6 text-center text-lg-start">
-                <h2 class="fw-bold mt-4">I am Professional User <br> Experience Designer</h2>
+                <h2 class="fw-bold mt-4 fs-1">I am Professional User <br> Experience Designer</h2>
                 <p class="mt-4 text-black-50">I design and develop services for customers specializing creating stylish,
                     modern websites, web services and online stores. My passion is to design digital user experiences.
                 </p>
@@ -209,8 +219,49 @@
         </div>
     </section>
     <section class="section-2 bg-light">
-        <div class="container">
-            
+        <div
+            class="container text-center text-lg-start d-flex justify-content-between align-items-center flex-column flex-lg-row">
+            <div class="col-12 col-lg-5">
+                <h2 class="fw-bold fs-1">Work Process</h2>
+                <p class="mt-4 text-black-50">Driven by design and powered by code, I create digital interfaces that
+                    feel intuitive and perform seamlessly. Every layout, animation, and component is crafted with
+                    intention — merging usability with visual clarity,</p>
+                <p class="mt-4 text-black-50">I blend clean design with efficient code to build engaging, user-friendly
+                    web experiences that stand out.</p>
+            </div>
+            <div style="margin: 150px 0" class="col-12 col-lg-6">
+                <div class="d-flex col-12">
+                    <div class="bg-white p-4 rounded-3 m-2 hover-shadow">
+                        <button
+                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
+                            <i class="ri-calendar-2-line"></i>
+                        </button>
+                        <h5 class="fw-bold my-2">1. Research</h5>
+                        <p class="fs-6 text-black-50 my-3">Design meets function in every pixel, blending clarity with
+                            intuitive motion.</p>
+                    </div>
+                    <div class="bg-white m-2 p-4 rounded-3">
+                        <i class="ri-line-chart-fill"></i>
+                        <h5 class="fw-bold">2. Analyze</h5>
+                        <p class="fs-6 text-black-50">Crafting clean, thoughtful interfaces where form flows seamlessly
+                            into function and clarity.</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="bg-white m-2 p-4 rounded-3">
+                        <i class="ri-pencil-line"></i>
+                        <h5 class="fw-bold">3. Design</h5>
+                        <p class="fs-6 text-black-50">I design seamless digital experiences with precision, purpose, and
+                            a touch of elegance.</p>
+                    </div>
+                    <div class="bg-white m-2 p-4 rounded-3">
+                        <i class="ri-macbook-line"></i>
+                        <h5 class="fw-bold">4. Launch</h5>
+                        <p class="fs-6 text-black-50">I craft digital products where thoughtful design meets
+                            performance-driven, responsive development.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
