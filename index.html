@@ -71,6 +71,16 @@
             padding: 130px 0;
         }
 
+        form input{
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-bottom: 2px solid rgb(210, 207, 207);
+            border-top: 1px solid rgb(238, 237, 237);
+            margin: 10px 0;
+        }
+
         /* COSTUM CSS END */
 
         /* COLORS CSS START */
@@ -561,39 +571,69 @@
                 <p class="fw-bold">Esther Howard</p>
                 <p class="fs-6 text-black-50">Managing Director, ABC Company</p>
             </div>
-            <div id="Contact" class="px-5 d-flex flex-column flex-md-row align-items-center justify-content-between py-5 shadow-lg border-radius">
-                <div class="col-12 col-md-5 col-lg-5 text-center text-md-start">
-                    <h2>Let’s discuss your Project</h2>
-                    <p class="text-black-50">I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for.</p>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+            <div id="Contact"
+                class="px-2 px-md-3 px-lg-5 d-flex flex-column-reverse flex-lg-row gap-5 align-items-center justify-content-between py-5 mt-5 shadow-lg border-radius">
+                <div class="col-12 col-lg-5">
+                    <h2 class="text-center text-lg-start fw-bold">Let’s discuss your Project</h2>
+                    <p class="text-black-50 text-center text-lg-start my-4">I'm available for freelance work. Drop me a
+                        line if you have a project you
+                        think I'd be a good fit for.</p>
+                    <div class="col-12 col-lg-9 d-flex flex-column flex-md-row flex-lg-column gap-2 gap-md-0 gap-lg-2">
+                        <div class="d-flex align-items-center hover-shadow border-radius-10">
+                            <button
+                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
+                                <i class="ri-map-pin-2-fill"></i>
+                            </button>
+                            <div class="lh-1">
+                                <p class="fs-6 text-black-50">Address:
+                                <p class="fs-6 fw-bold">New Mexico, 31134</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center hover-shadow border-radius-10">
+                            <button
+                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
+                                <i class="ri-mail-fill"></i>
+                            </button>
+                            <div class="lh-1">
+                                <p class="fs-6 text-black-50">My Email:</p>
+                                <p class="fs-6 fw-bold">mymail@mail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center hover-shadow border-radius-10">
+                            <button
+                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
+                                <i class="ri-phone-fill"></i>
+                            </button>
+                            <div class="lh-1">
+                                <p class="fs-6 text-black-50">Call Me Now:</p>
+                                <p class="fs-6 fw-bold">00-123 00000</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 col-lg-6 d-flex flex-column gap-4">
-                    <div class="bg-white p-4 border-radius-10 hover-shadow side-border transition">
-                        <h3 class="fw-bold">User Experience (UX)</h3>
-                        <p>I design intuitive and enjoyable experiences by understanding user needs, conducting
-                            research,
-                            and creating wireframes and prototypes that enhance usability.</p>
+                <form class="col-12 col-lg-6 d-flex flex-column gap-4 px-0 px-md-3 px-lg-0">
+                    <p class="text-black-50 text-center text-lg-start col-11">I'm always open to discussing product design work or partnership opportunities.</p>
+                    <div class="">
+                        <input type="text" placeholder="Name*">
+                        <br>
+                        <input type="email" placeholder="Email*">
+                        <br>
+                        <input type="text" placeholder="Location*">
+                        <br>
+                        <input class="col-4" type="text" placeholder="Budget*">
+                        
+                        <input class="col-7 ms-3" type="text" placeholder="Subject*">
+                        <br>
+                        <input type="text" placeholder="Message*">
                     </div>
-                    <div class="bg-white p-4 border-radius-10 hover-shadow side-border transition">
-                        <h3 class="fw-bold">User Experience (UX)</h3>
-                        <p>I design intuitive and enjoyable experiences by understanding user needs, conducting
-                            research,
-                            and creating wireframes and prototypes that enhance usability.</p>
-                    </div>
-                    <div class="bg-white p-4 border-radius-10 hover-shadow side-border transition">
-                        <h3 class="fw-bold">User Experience (UX)</h3>
-                        <p>I design intuitive and enjoyable experiences by understanding user needs, conducting
-                            research,
-                            and creating wireframes and prototypes that enhance usability.</p>
-                    </div>
-                </div>
+                        <button
+                        class="col-5 col-md-4 my-4 px-3 py-2 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
+                        <a class="text-decoration-none text-white" href="">Submit <i class="ri-send-plane-fill"></i> </a></button>
+                </form>
             </div>
         </div>
     </section>
+    <button class="purple-background rounded-circle border-0 px-2 fs-1 position-fixed "> <a class="text-decoration-none text-white " href=""><i class="ri-arrow-up-s-line"></i></a> </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
