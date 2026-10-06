@@ -1,725 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Picto-PortFolio </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Brooklyn Gilbert — UI/UX Designer & Developer</title>
+    <meta name="description" content="Brooklyn Gilbert — Freelance UI/UX Designer & Developer based in London, crafting immersive digital experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-
-        }
-
-        :root {
-            --background: #9937e9;
-            ---color: #000;
-        }
-
-        /* COSTUM CSS START */
-
-        .new-font-family {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-
-        .w-90 {
-            max-width: 90%;
-        }
-
-        .border-radius {
-            border-radius: 20px;
-        }
-
-        .border-radius-10 {
-            border-radius: 10px;
-        }
-
-        .w-40 {
-            width: 40%;
-        }
-
-        .align-center {
-            text-align: center;
-        }
-
-        .hero-section-light-color {
-            background-color: rgb(240, 224, 239);
-        }
-
-        h1 {
-            font-size: 55px;
-        }
-
-        .section-1 {
-            background: linear-gradient(30deg, white, white, white, white, rgb(239, 179, 233));
-        }
-
-        p {
-            font-size: 1.2rem;
-        }
-
-        #Home .color-text span {
-            background: linear-gradient(to top, #ffc8c8 40%, transparent 40%);
-        }
-
-        .section-1 #Home {
-            padding: 130px 0;
-        }
-
-        form input {
-            width: 100%;
-            padding: 10px;
-            font-size: 18px;
-            border: none;
-            border-bottom: 2px solid rgb(210, 207, 207);
-            border-top: 1px solid rgb(238, 237, 237);
-            margin: 10px 0;
-        }
-
-        .clients{
-            position: relative;
-            z-index: -1;
-        }
-
-        footer {
-            background-color: rgba(1, 14, 42, 0.84)
-        }
-
-        .scroller {
-            position: fixed;
-            bottom: 25px;
-            right: 50px;
-            font-size: 50px;
-            padding: 0px 10px;
-        }
-
-        /* COSTUM CSS END */
-
-        /* COLORS CSS START */
-
-
-
-        .purple-background {
-            background-color: var(--background);
-        }
-
-        .black-color {
-            color: var(---color);
-        }
-
-        .bg-black {
-            background-color: var(---color);
-        }
-
-        .purple-text {
-            color: var(--background);
-        }
-
-        /* COLORS CSS END */
-
-        /* TRANSITION CSS START */
-
-        .transition-sec {
-            transition: 0.9s;
-        }
-
-        /* TRANSITION CSS END */
-
-        /* HOVER CSS START */
-
-        .li-hover:hover {
-            background-color: rgba(0, 0, 0, 0.119);
-        }
-
-        .a-hover:hover {
-            color: var(--background);
-        }
-
-        .hover-scale:hover {
-            transform: scale(1.1);
-            background-color: rgb(106, 16, 147);
-        }
-
-        .card-button-hover:hover {
-            color: white;
-            background-color: var(--background);
-        }
-
-        .hover-shadow:hover {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
-        }
-
-        .cv-button:hover {
-            border-color: var(--background);
-            color: var(--background);
-            border: 1px solid var(--background);
-            border-radius: 5px;
-        }
-
-        .side-border:hover {
-            border-left: 6px solid var(--background);
-        }
-
-        /* HOVER CSS END */
-
-    
-        @media (max-width: 1200px) {
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            p {
-                font-size: 0.9rem;
-            }
-
-            .section-1 #Home {
-                padding: 100px 0;
-            }
-
-        }
-
-        @media (max-width: 555px) {
-            .navbar h2 {
-                font-size: 1.3rem;
-            }
-
-            .section-1 #Home {
-                padding: 50px 0;
-            }
-
-            .scroller {
-                bottom: 25px;
-                right: 25px;
-                font-size: 30px;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="position-relative">
-    <button class="scroller purple-background rounded-circle border-0"> <a class="text-decoration-none text-white "
-            href="#Home"><i class="ri-arrow-up-s-line"></i></a> </button>
-    <header class="position-sticky top-0 bg-light">
-        <nav class="navbar container py-2">
-            <div class="d-flex gap-2 align-items-center">
-                <h3 class="rounded-circle px-3 py-2 purple-background text-light">B</h3>
-                <h2 class="fw-bold new-font-family">Brooklyn</h2>
+    <!-- ══════════ PRELOADER ══════════ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-center">
+            <div class="preloader-logo">
+                <span class="pl-letter">B</span><span class="pl-letter">.</span><span class="pl-letter">G</span>
             </div>
-            <div class="d-flex align-items-center">
-                <ul class="d-none d-lg-flex gap-2 list-unstyled mx-2 my-1">
-                    <li class="py-3"><a class="li-hover px-4 py-3 rounded-3 text-decoration-none black-color a-hover"
-                            href="#Home">Home</a></li>
-                    <li class="py-3"><a class="li-hover px-4 py-3 rounded-3 text-decoration-none black-color a-hover"
-                            href="#About">About</a></li>
-                    <li class="py-3"><a class="li-hover px-4 py-3 rounded-3 text-decoration-none black-color a-hover"
-                            href="#Process">Process</a></li>
-                    <li class="py-3"><a class="li-hover px-4 py-3 rounded-3 text-decoration-none black-color a-hover"
-                            href="#PortFolio">PortFolio</a></li>
-                    <li class="py-3"><a class="li-hover px-4 py-3 rounded-3 text-decoration-none black-color a-hover"
-                            href="#Blog">Blog</a></li>
-                    <li class="py-3"><a class="li-hover px-4 py-3 rounded-3 text-decoration-none black-color a-hover"
-                            href="#Services">Services</a></li>
-                </ul>
-                <button class="navbar-toggler m-2 d-block d-lg-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="ri-menu-3-line"></i>
-                </button>
-                <button
-                    class="px-3 py-2 px-lg-4 py-lg-3 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec"><a
-                        class="text-decoration-none text-white" href="#Contact">Contact</a></button>
+            <div class="preloader-bar"><span id="preloaderFill"></span></div>
+            <div class="preloader-meta">
+                <span class="preloader-tag">Portfolio — 2025</span>
+                <span class="preloader-count" id="preloaderCount">0%</span>
+            </div>
+        </div>
+        <button class="preloader-enter magnetic" id="preloaderEnter">
+            <span>Enter Experience</span>
+            <i class="ri-arrow-right-line"></i>
+        </button>
+    </div>
+
+    <!-- ══════════ CURSOR & PROGRESS ══════════ -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"><span class="cursor-label" id="cursorLabel"></span></div>
+    <div class="scroll-progress"><span id="scrollProgressFill"></span></div>
+
+    <!-- ══════════ HEADER ══════════ -->
+    <header class="site-header" id="siteHeader">
+        <nav class="nav container-wide">
+            <a href="#home" class="nav-logo magnetic" data-scroll>
+                <span class="nav-logo-mark">B</span>
+                <span class="nav-logo-text">Brooklyn<em>Gilbert</em></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link" data-scroll><span class="nl"><span>About</span><span>About</span></span></a></li>
+                <li><a href="#services" class="nav-link" data-scroll><span class="nl"><span>Services</span><span>Services</span></span></a></li>
+                <li><a href="#work" class="nav-link" data-scroll><span class="nl"><span>Work</span><span>Work</span></span></a></li>
+                <li><a href="#journal" class="nav-link" data-scroll><span class="nl"><span>Journal</span><span>Journal</span></span></a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#contact" class="btn btn-pill magnetic" data-scroll><span>Let's Talk</span><i class="ri-arrow-right-up-line"></i></a>
+                <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
             </div>
         </nav>
     </header>
 
-    <section class="section-1">
-        <div id="Home"
-            class="container mx-auto d-flex justify-content-between flex-column-reverse flex-lg-row text-center text-lg-start">
-            <div class="col-12 col-lg-6 d-flex justify-content-between flex-column new-font-family">
-                <div>
-                    <h1 style="margin-top: 20px;" class="lh-1 fw-bolder">Hello, I’m <br> Brooklyn Gilbert</h1>
-                    <p class="my-3 color-text">I'm a Freelance <span> UI/UX Designer </span> and <span> Developer
-                        </span> based in London, England. I strives to
-                        build immersive and beautiful web applications through carefully crafted code and user-centric
-                        design.</p>
-                    <button
-                        class="px-3 py-2 px-lg-4 py-lg-3 my-2 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec"><a
-                            class="text-decoration-none text-white" href="">Say Hello!</a></button>
-                </div>
-                <div class="d-flex justify-content-evenly flex-column flex-md-row align-items-center">
-                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded">
-                        <h4 class="fw-bold">15 Y.</h4>
-                        <p class="fs-6 text-black-50">Experince</p>
-                    </span>
-                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded ">
-                        <h4 class="fw-bold">250+</h4>
-                        <p class="fs-6 text-black-50">Projects Completed</p>
-                    </span>
-                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded">
-                        <h4 class="fw-bold">58</h4>
-                        <p class="fs-6 text-black-50">Happy Clients</p>
-                    </span>
-                </div>
-            </div>
-            <div class="col-11 col-lg-5 border-radius shadow-lg d-flex text-center m-auto m-lg-0">
-                <img class="w-100" src="./images/my-picture.png" alt="">
-            </div>
+    <!-- ══════════ MOBILE MENU ══════════ -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-bg"></div>
+        <ul class="mobile-menu-list">
+            <li><a href="#home" data-scroll class="mm-link"><span class="mm-num">01</span>Home</a></li>
+            <li><a href="#about" data-scroll class="mm-link"><span class="mm-num">02</span>About</a></li>
+            <li><a href="#services" data-scroll class="mm-link"><span class="mm-num">03</span>Services</a></li>
+            <li><a href="#work" data-scroll class="mm-link"><span class="mm-num">04</span>Work</a></li>
+            <li><a href="#journal" data-scroll class="mm-link"><span class="mm-num">05</span>Journal</a></li>
+            <li><a href="#contact" data-scroll class="mm-link"><span class="mm-num">06</span>Contact</a></li>
+        </ul>
+        <div class="mobile-menu-foot">
+            <a href="mailto:hello@brooklyngilbert.com">hello@brooklyngilbert.com</a>
+            <span>London, England</span>
         </div>
-        <div class="section-1-part-2 container border-radius shadow-lg d-flex align-items-center flex-column flex-lg-row pb-4"
-            id="About">
-            <div class="m-5">
-                <img class="img-fluid" src="./images/my-img-2.png" alt="">
-            </div>
-            <div class="col-12 col-lg-6 text-center text-lg-start">
-                <h2 class="fw-bold mt-4 fs-1">I am Professional User <br> Experience Designer</h2>
-                <p class="mt-4 text-black-50">I design and develop services for customers specializing creating stylish,
-                    modern websites, web services and online stores. My passion is to design digital user experiences.
-                </p>
-                <p class="mt-3 text-black-50">I design and develop services for customers specializing creating stylish,
-                    modern websites, web services.</p>
-                <button
-                    class="px-3 py-2 px-lg-4 py-lg-3 mt-4 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
-                    <a class="text-decoration-none text-white" href="">My Projects </a></button>
-                <button class="py-2 mt-4 mx-3 fw-bold bg-white rounded-3 border cv-button"> <a
-                        class="black-color text-decoration-none cv-button px-4 py-2" href=""> <i
-                            class="ri-download-2-line"></i>
-                        Download CV
-                    </a> </button>
-            </div>
-        </div>
-    </section>
-    <section class="section-2 bg-light" id="Process">
-        <div
-            class="container text-center text-lg-start d-flex justify-content-between align-items-center flex-column flex-lg-row py-5">
-            <div class="col-12 col-lg-5">
-                <h2 class="fw-bold fs-1">Work Process</h2>
-                <p class="mt-4 text-black-50">Driven by design and powered by code, I create digital interfaces that
-                    feel intuitive and perform seamlessly. Every layout, animation, and component is crafted with
-                    intention — merging usability with visual clarity,</p>
-                <p class="mt-4 text-black-50">I blend clean design with efficient code to build engaging, user-friendly
-                    web experiences that stand out.</p>
-            </div>
-            <div style="margin: 20px 0" class="col-12 col-lg-6">
-                <div class="d-flex flex-column flex-md-row">
-                    <div class="bg-white p-4 border-radius mx-2 hover-shadow">
-                        <button
-                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
-                            <i class="ri-calendar-2-line"></i>
-                        </button>
-                        <h5 class="fw-bold my-2">1. Research</h5>
-                        <p class="fs-6 text-black-50 my-3">Design meets function in every pixel, blending clarity with
-                            intuitive motion.</p>
-                    </div>
-                    <div class="bg-white p-4 border-radius mx-2 my-3 hover-shadow">
-                        <button
-                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
-                            <i class="ri-line-chart-fill"></i>
-                        </button>
-                        <h5 class="fw-bold my-2">2. Analyze</h5>
-                        <p class="fs-6 text-black-50">Crafting clean, thoughtful interfaces where form flows seamlessly
-                            into function and clarity.</p>
-                    </div>
-                </div>
-                <div class="d-flex flex-column flex-md-row">
-                    <div class="bg-white p-4 border-radius m-2 hover-shadow">
-                        <button
-                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
-                            <i class="ri-pencil-line"></i>
-                        </button>
-                        <h5 class="fw-bold my-2">3. Design</h5>
-                        <p class="fs-6 text-black-50">I design seamless digital experiences with precision, purpose, and
-                            a touch of elegance.</p>
-                    </div>
-                    <div class="bg-white p-4 border-radius m- hover-shadow">
-                        <button
-                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
-                            <i class="ri-macbook-line"></i>
-                        </button>
-                        <h5 class="fw-bold my-2">4. Launch</h5>
-                        <p class="fs-6 text-black-50">I craft digital products where thoughtful design meets
-                            performance-driven, responsive development.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-3" id="PortFolio">
-        <div class="container">
-            <div class="pt-5 align-center col-12 col-lg-6 m-auto">
-                <h2 class="fw-bold fs-1">Portfolio</h2>
-                <p class="mt-4 text-black-50">Here's a selection of my recent work, showcasing my skills in creating
-                    user-centric and visually appealing interfaces.</p>
-            </div>
+    </div>
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 my-5 mx-auto">
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Portfolio-imges/portfolio-img-1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
-                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
-                            <p class="text-black-50 fs-6">I focus on crafting smooth, responsive interfaces that balance
-                                aesthetic appeal with
-                                practical functionality.</p>
-                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
-                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
-                                    Case Study
-                                    <i class="ri-arrow-right-line"></i>
-                                </a> </button>
+    <main id="smooth-content">
+
+        <!-- ══════════ HERO ══════════ -->
+        <section class="hero" id="home">
+            <div class="hero-bg-text" aria-hidden="true">DESIGN</div>
+            <div class="container-wide hero-inner">
+                <p class="hero-kicker reveal-line"><span class="dot"></span>UI/UX Designer &amp; Developer — London, UK</p>
+                <h1 class="hero-title">
+                    <span class="ht-line ht-left"><span class="ht-word">BROOKLYN</span></span>
+                    <span class="ht-line ht-right"><span class="ht-word ht-serif">Gilbert<i class="ht-reg">®</i></span></span>
+                </h1>
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <p class="hero-lead reveal-words">I build immersive, beautiful web applications through carefully crafted code and user-centric design — merging usability with visual clarity.</p>
+                        <div class="hero-cta">
+                            <a href="#contact" class="btn btn-solid magnetic" data-scroll><span>Say Hello</span><i class="ri-arrow-right-line"></i></a>
+                            <button class="btn btn-ghost magnetic" id="cvBtn"><span>Download CV</span><i class="ri-download-2-line"></i></button>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Portfolio-imges/portfolio-img-2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
-                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
-                            <p class="text-black-50 fs-6">Designed an intuitive dashboard for product management,
-                                emphasizing clarity and user efficiency.</p>
-                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
-                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
-                                    Case Study
-                                    <i class="ri-arrow-right-line"></i>
-                                </a> </button>
+                    <div class="hero-figure" data-parallax="18">
+                        <div class="hero-img-wrap">
+                            <img src="assets/img/hero.jpg" alt="Brooklyn Gilbert portrait" class="hero-img">
+                        </div>
+                        <div class="hero-badge">
+                            <svg viewBox="0 0 120 120" class="badge-svg">
+                                <defs><path id="circlePath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+                                <text><textPath href="#circlePath">OPEN FOR FREELANCE • UI UX DESIGN • DEVELOPMENT •</textPath></text>
+                            </svg>
+                            <i class="ri-arrow-down-line badge-arrow"></i>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Portfolio-imges/portfolio-img-3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
-                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
-                            <p class="text-black-50 fs-6">Developed a modern admin panel with a focus on usability and
-                                seamless navigation for end users and so on.</p>
-                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
-                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
-                                    Case Study
-                                    <i class="ri-arrow-right-line"></i>
-                                </a> </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Portfolio-imges/portfolio-img-4.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
-                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
-                            <p class="text-black-50 fs-6">Created a responsive dashboard layout that adapts smoothly
-                                across devices and screen sizes and so on.</p>
-                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
-                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
-                                    Case Study
-                                    <i class="ri-arrow-right-line"></i>
-                                </a> </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Portfolio-imges/portfolio-img-5.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
-                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
-                            <p class="text-black-50 fs-6">Implemented interactive charts and widgets to visualize
-                                product data effectively for stakeholders.</p>
-                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
-                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
-                                    Case Study
-                                    <i class="ri-arrow-right-line"></i>
-                                </a> </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Portfolio-imges/portfolio-img-6.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
-                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
-                            <p class="text-black-50 fs-6">Enhanced user experience by streamlining workflows and
-                                optimizing interface components and so on.</p>
-                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
-                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
-                                    Case Study
-                                    <i class="ri-arrow-right-line"></i>
-                                </a> </button>
-                        </div>
+                    <div class="hero-stats">
+                        <div class="stat"><span class="stat-num" data-count="15" data-suffix="+">0</span><span class="stat-label">Years of Experience</span></div>
+                        <div class="stat"><span class="stat-num" data-count="250" data-suffix="+">0</span><span class="stat-label">Projects Completed</span></div>
+                        <div class="stat"><span class="stat-num" data-count="58" data-suffix="">0</span><span class="stat-label">Happy Clients</span></div>
                     </div>
                 </div>
             </div>
+            <div class="hero-scroll-hint"><span class="hsh-line"></span>Scroll to explore</div>
+        </section>
 
+        <!-- ══════════ MARQUEE ══════════ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Strategy</span><i>✦</i><span>Research</span><i>✦</i><span>UX Design</span><i>✦</i><span>Development</span><i>✦</i><span>Motion</span><i>✦</i><span>Launch</span><i>✦</i>
+                <span>Strategy</span><i>✦</i><span>Research</span><i>✦</i><span>UX Design</span><i>✦</i><span>Development</span><i>✦</i><span>Motion</span><i>✦</i><span>Launch</span><i>✦</i>
+            </div>
         </div>
-        <div class="d-flex justify-content-center mb-5">
-            <button
-                class="px-3 py-2 px-lg-4 py-lg-3 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
-                <a class="text-decoration-none text-white" href="">More Project</a></button>
-        </div>
-        </div>
-    </section>
-    <section class="section-4 bg-black">
-        <div class="container">
-            <div class="col-11 col-lg-7 m-auto text-center py-5">
-                <h2 class="text-white fw-bold fs-1 pt-4">Do you have a Project Idea? <br> Let's discuss your project!
+
+        <!-- ══════════ ABOUT ══════════ -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-num">01</span>
+                    <span class="section-tag">About Me</span>
+                </div>
+                <div class="about-grid">
+                    <div class="about-media" data-parallax="10">
+                        <div class="about-img-wrap img-reveal">
+                            <img src="assets/img/about.jpg" alt="Designer workspace at night">
+                        </div>
+                        <div class="about-stamp">
+                            <span class="stamp-num">Est.</span>
+                            <span class="stamp-year">2010</span>
+                        </div>
+                    </div>
+                    <div class="about-body">
+                        <h2 class="section-title reveal-words">Professional User Experience Designer, <em>obsessed</em> with the details.</h2>
+                        <p class="reveal-fade">I design and develop services for customers specializing in stylish, modern websites, web services and online stores. My passion is to design digital user experiences that feel effortless.</p>
+                        <p class="reveal-fade">Driven by design and powered by code, I create digital interfaces that feel intuitive and perform seamlessly. Every layout, animation and component is crafted with intention.</p>
+                        <ul class="about-list">
+                            <li class="reveal-fade"><i class="ri-check-line"></i>User research &amp; prototyping</li>
+                            <li class="reveal-fade"><i class="ri-check-line"></i>Design systems at scale</li>
+                            <li class="reveal-fade"><i class="ri-check-line"></i>Pixel-perfect development</li>
+                        </ul>
+                        <a href="#work" class="btn btn-solid magnetic" data-scroll><span>My Projects</span><i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ SERVICES ══════════ -->
+        <section class="services section" id="services">
+            <div class="container-wide">
+                <div class="section-head">
+                    <span class="section-num">02</span>
+                    <span class="section-tag">What I Do</span>
+                </div>
+                <h2 class="section-title container reveal-words">Capabilities that turn ideas into <em>refined</em> digital products.</h2>
+                <div class="service-list" id="serviceList">
+                    <article class="service-row" data-preview="assets/img/work-3.jpg">
+                        <span class="sr-num">/ 01</span>
+                        <h3 class="sr-title">User Experience Design</h3>
+                        <p class="sr-desc">Intuitive, research-backed experiences — wireframes, flows and prototypes that put the user first.</p>
+                        <span class="sr-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                    </article>
+                    <article class="service-row" data-preview="assets/img/work-1.jpg">
+                        <span class="sr-num">/ 02</span>
+                        <h3 class="sr-title">Interface Development</h3>
+                        <p class="sr-desc">Clean, performant front-end builds where design intent survives all the way to production.</p>
+                        <span class="sr-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                    </article>
+                    <article class="service-row" data-preview="assets/img/work-4.jpg">
+                        <span class="sr-num">/ 03</span>
+                        <h3 class="sr-title">Design Systems</h3>
+                        <p class="sr-desc">Scalable component libraries and token architecture that keep brands consistent everywhere.</p>
+                        <span class="sr-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                    </article>
+                    <article class="service-row" data-preview="assets/img/work-6.jpg">
+                        <span class="sr-num">/ 04</span>
+                        <h3 class="sr-title">Motion &amp; Interaction</h3>
+                        <p class="sr-desc">Scroll choreography, micro-interactions and transitions that make products feel alive.</p>
+                        <span class="sr-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                    </article>
+                </div>
+                <div class="service-preview" id="servicePreview"><img src="assets/img/work-3.jpg" alt=""></div>
+            </div>
+        </section>
+
+        <!-- ══════════ WORK ══════════ -->
+        <section class="work section" id="work">
+            <div class="container-wide">
+                <div class="section-head">
+                    <span class="section-num">03</span>
+                    <span class="section-tag">Selected Work</span>
+                </div>
+                <h2 class="section-title container reveal-words">Work that speaks in <em>interfaces</em>.</h2>
+
+                <div class="work-list">
+                    <article class="work-item">
+                        <a href="#contact" data-scroll class="work-link" data-cursor="View Case">
+                            <div class="work-media img-reveal"><div class="work-parallax"><img src="assets/img/work-1.jpg" alt="Admininate dashboard"></div></div>
+                            <div class="work-info">
+                                <span class="work-meta">SaaS Dashboard — 2025</span>
+                                <h3 class="work-title">Admininate Analytics</h3>
+                                <p class="work-desc">A dark-mode product dashboard balancing dense data with calm, scannable hierarchy.</p>
+                                <span class="work-more">Case Study <i class="ri-arrow-right-line"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="work-item">
+                        <a href="#contact" data-scroll class="work-link" data-cursor="View Case">
+                            <div class="work-media img-reveal"><div class="work-parallax"><img src="assets/img/work-2.jpg" alt="MediCare app"></div></div>
+                            <div class="work-info">
+                                <span class="work-meta">Mobile App — 2025</span>
+                                <h3 class="work-title">MediCare Health</h3>
+                                <p class="work-desc">Patient-first telehealth app with warm, accessible dark interface patterns.</p>
+                                <span class="work-more">Case Study <i class="ri-arrow-right-line"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="work-item">
+                        <a href="#contact" data-scroll class="work-link" data-cursor="View Case">
+                            <div class="work-media img-reveal"><div class="work-parallax"><img src="assets/img/work-3.jpg" alt="Nucleus design system"></div></div>
+                            <div class="work-info">
+                                <span class="work-meta">Design System — 2024</span>
+                                <h3 class="work-title">Nucleus DS</h3>
+                                <p class="work-desc">A token-driven dark design system powering four products across two platforms.</p>
+                                <span class="work-more">Case Study <i class="ri-arrow-right-line"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="work-item">
+                        <a href="#contact" data-scroll class="work-link" data-cursor="View Case">
+                            <div class="work-media img-reveal"><div class="work-parallax"><img src="assets/img/work-4.jpg" alt="Pulse UI kit"></div></div>
+                            <div class="work-info">
+                                <span class="work-meta">UI Kit — 2024</span>
+                                <h3 class="work-title">Pulse Components</h3>
+                                <p class="work-desc">120+ crafted dark UI components with motion guidelines built in.</p>
+                                <span class="work-more">Case Study <i class="ri-arrow-right-line"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="work-item">
+                        <a href="#contact" data-scroll class="work-link" data-cursor="View Case">
+                            <div class="work-media img-reveal"><div class="work-parallax"><img src="assets/img/work-5.jpg" alt="Halcyon landing page"></div></div>
+                            <div class="work-info">
+                                <span class="work-meta">Web Design — 2023</span>
+                                <h3 class="work-title">Halcyon Windows</h3>
+                                <p class="work-desc">Editorial landing experience for an architecture brand — dark, tactile, cinematic.</p>
+                                <span class="work-more">Case Study <i class="ri-arrow-right-line"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="work-item">
+                        <a href="#contact" data-scroll class="work-link" data-cursor="View Case">
+                            <div class="work-media img-reveal"><div class="work-parallax"><img src="assets/img/work-6.jpg" alt="Dreamflow SaaS"></div></div>
+                            <div class="work-info">
+                                <span class="work-meta">Brand &amp; Web — 2023</span>
+                                <h3 class="work-title">Dreamflow</h3>
+                                <p class="work-desc">Monochrome SaaS identity and site with sculptural art direction.</p>
+                                <span class="work-more">Case Study <i class="ri-arrow-right-line"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ PROCESS ══════════ -->
+        <section class="process section" id="process">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-num">04</span>
+                    <span class="section-tag">Work Process</span>
+                </div>
+                <h2 class="section-title reveal-words">A process built on <em>clarity</em>, not chaos.</h2>
+                <div class="process-track">
+                    <div class="process-line"><span id="processFill"></span></div>
+                    <div class="process-step reveal-fade">
+                        <span class="ps-num">01</span>
+                        <h3>Research</h3>
+                        <p>Understanding users, market and constraints before a single pixel is placed.</p>
+                    </div>
+                    <div class="process-step reveal-fade">
+                        <span class="ps-num">02</span>
+                        <h3>Analyze</h3>
+                        <p>Turning findings into flows, information architecture and success metrics.</p>
+                    </div>
+                    <div class="process-step reveal-fade">
+                        <span class="ps-num">03</span>
+                        <h3>Design</h3>
+                        <p>Crafting interfaces with precision, purpose and a touch of elegance.</p>
+                    </div>
+                    <div class="process-step reveal-fade">
+                        <span class="ps-num">04</span>
+                        <h3>Launch</h3>
+                        <p>Thoughtful design meets performance-driven, responsive development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ TESTIMONIALS ══════════ -->
+        <section class="testimonials section" id="testimonials">
+            <div class="container-wide">
+                <div class="section-head">
+                    <span class="section-num">05</span>
+                    <span class="section-tag">Testimonials</span>
+                </div>
+                <div class="t-slider" id="tSlider">
+                    <div class="t-track" id="tTrack">
+                        <blockquote class="t-slide">
+                            <p class="t-quote">“From the initial consultation to the final delivery, every step was handled professionally. The end result impressed our stakeholders.”</p>
+                            <footer><strong>Esther Howard</strong><span>Managing Director, ABC Company</span></footer>
+                        </blockquote>
+                        <blockquote class="t-slide">
+                            <p class="t-quote">“Brooklyn took our vague idea and turned it into a product our users genuinely love. The attention to micro-detail is unmatched.”</p>
+                            <footer><strong>Cameron Williamson</strong><span>Founder, Lumen Labs</span></footer>
+                        </blockquote>
+                        <blockquote class="t-slide">
+                            <p class="t-quote">“Rare to find a designer who codes this well. Handoff friction simply disappeared — speed and quality went up together.”</p>
+                            <footer><strong>Bessie Cooper</strong><span>VP Product, Northwind</span></footer>
+                        </blockquote>
+                    </div>
+                    <div class="t-nav">
+                        <button class="t-btn magnetic" id="tPrev" aria-label="Previous testimonial"><i class="ri-arrow-left-line"></i></button>
+                        <div class="t-dots" id="tDots"></div>
+                        <button class="t-btn magnetic" id="tNext" aria-label="Next testimonial"><i class="ri-arrow-right-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ CLIENTS MARQUEE ══════════ -->
+        <section class="clients">
+            <p class="clients-label">Trusted by teams at</p>
+            <div class="clients-marquee" aria-hidden="true">
+                <div class="clients-track">
+                    <span>Google</span><span>Dribbble</span><span>LinkedIn</span><span>Amazon</span><span>Medium</span><span>Spotify</span>
+                    <span>Google</span><span>Dribbble</span><span>LinkedIn</span><span>Amazon</span><span>Medium</span><span>Spotify</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ JOURNAL ══════════ -->
+        <section class="journal section" id="journal">
+            <div class="container-wide">
+                <div class="section-head">
+                    <span class="section-num">06</span>
+                    <span class="section-tag">Journal</span>
+                </div>
+                <div class="journal-head">
+                    <h2 class="section-title reveal-words">Notes on design, code &amp; <em>craft</em>.</h2>
+                    <a href="#journal" class="btn btn-ghost magnetic"><span>All Articles</span><i class="ri-arrow-right-line"></i></a>
+                </div>
+                <div class="journal-grid">
+                    <a href="#journal" class="j-card" data-cursor="Read">
+                        <div class="j-media"><img src="assets/img/blog-1.jpg" alt="Typography study poster"></div>
+                        <div class="j-body">
+                            <span class="j-meta">Typography — 12 Mar 2026</span>
+                            <h3>Type is a structure: designing with letterforms</h3>
+                        </div>
+                    </a>
+                    <a href="#journal" class="j-card" data-cursor="Read">
+                        <div class="j-media"><img src="assets/img/blog-2.jpg" alt="Abstract beige waves"></div>
+                        <div class="j-body">
+                            <span class="j-meta">Art Direction — 28 Feb 2026</span>
+                            <h3>Warm minimalism: motion with a material soul</h3>
+                        </div>
+                    </a>
+                    <a href="#journal" class="j-card" data-cursor="Read">
+                        <div class="j-media"><img src="assets/img/blog-3.jpg" alt="Wabi sabi wall sculpture"></div>
+                        <div class="j-body">
+                            <span class="j-meta">Process — 09 Feb 2026</span>
+                            <h3>Wabi-sabi UX: designing for imperfection</h3>
+                        </div>
+                    </a>
+                    <a href="#journal" class="j-card" data-cursor="Read">
+                        <div class="j-media"><img src="assets/img/blog-4.jpg" alt="Abstract wood wall art"></div>
+                        <div class="j-body">
+                            <span class="j-meta">Craft — 21 Jan 2026</span>
+                            <h3>Texture talks: bringing tactility into digital design</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ CTA BAND ══════════ -->
+        <section class="cta-band">
+            <div class="container cta-inner">
+                <h2 class="cta-title">
+                    <span class="ct-line"><span>Have a project</span></span>
+                    <span class="ct-line"><span>in <em>mind?</em></span></span>
                 </h2>
-                <p class="text-white-50 my-4">I'm always open to discussing new projects and creative ideas. Let's
-                    connect and build something amazing together.</p>
-                <button
-                    class="px-3 py-2 px-lg-4 py-lg-3 mt-4 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
-                    <a class="text-decoration-none text-white" href="">Let's work Together <i
-                            class="ri-arrow-right-line"></i> </a></button>
+                <a href="#contact" class="btn btn-solid btn-lg magnetic" data-scroll><span>Let's work together</span><i class="ri-arrow-right-line"></i></a>
             </div>
-        </div>
-    </section>
-    <section id="Blog" class="section-5">
-        <div class="container">
-            <div class="pt-5 align-center col-12 col-lg-6 m-auto">
-                <h2 class="fw-bold fs-1">Blog</h2>
-                <p class="mt-4 text-black-50">Check out my recent blog posts where I share insights on design,
-                    development, and the latest industry trends.</p>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 my-5 mx-auto">
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Blog-imges/blog-img-1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">22 Oct, 2020 / 246 Comments</p>
-                            <h3 class="fs-5">Designing Engaging User Interfaces for M...</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Blog-imges/blog-img-2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">22 Oct, 2020 / 246 Comments</p>
-                            <h3 class="fs-5">Tips for Effective Dashboard Layouts and...</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Blog-imges/blog-img-3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">22 Oct, 2020 / 246 Comments</p>
-                            <h3 class="fs-5">How to Visualize Data for Better Product...</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border hover-shadow border-radius-10">
-                        <img src="./images/Blog-imges/blog-img-4.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="text-black-50 fs-6">22 Oct, 2020 / 246 Comments</p>
-                            <h3 class="fs-5">Responsive Design: Adapting to All Devic...</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="Services" class="section-6 bg-light">
-        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-5">
-            <div class="col-12 col-md-5 col-lg-5 text-center text-md-start">
-                <h2 class="fs-1 fw-bold">What I do?</h2>
-                <p class="text-black-50">I specialize in designing user experiences, crafting engaging interfaces, and
-                    building robust web
-                    applications that deliver value and usability.</p>
-                <p class="text-black-50">My approach combines creativity and technical expertise to deliver solutions
-                    that are both visually
-                    appealing and highly functional for users.</p>
-                <button
-                    class="px-3 py-2 px-lg-4 py-lg-3 my-4 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
-                    <a class="text-decoration-none text-white" href="">Say Hello!</a></button>
-            </div>
-            <div class="col-12 col-md-5 col-lg-6 d-flex flex-column gap-4">
-                <div class="bg-white p-4 border-radius-10 hover-shadow side-border transition">
-                    <h3 class="fw-bold">User Experience (UX)</h3>
-                    <p>I design intuitive and enjoyable experiences by understanding user needs, conducting research,
-                        and creating wireframes and prototypes that enhance usability.</p>
-                </div>
-                <div class="bg-white p-4 border-radius-10 hover-shadow side-border transition">
-                    <h3 class="fw-bold">User Experience (UX)</h3>
-                    <p>I design intuitive and enjoyable experiences by understanding user needs, conducting research,
-                        and creating wireframes and prototypes that enhance usability.</p>
-                </div>
-                <div class="bg-white p-4 border-radius-10 hover-shadow side-border transition">
-                    <h3 class="fw-bold">User Experience (UX)</h3>
-                    <p>I design intuitive and enjoyable experiences by understanding user needs, conducting research,
-                        and creating wireframes and prototypes that enhance usability.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-7 my-5">
-        <div class="container">
-            <div class="py-5 align-center col-12 col-lg-6 m-auto">
-                <h2 class="fw-bold fs-1">Happy Clients</h2>
-                <p class="mt-3 text-black-50">I've had the pleasure of working with a diverse range of companies, from
-                    startups to established brands.</p>
-            </div>
-            <div class="clients">
-                <marquee>
-                    <img src="./images/medias-imges/google.png" alt="">
-                    <img src="./images/medias-imges/dribbble.png" alt="">
-                    <img src="./images/medias-imges/linkedin.png" alt="">
-                    <img src="./images/medias-imges/amazon.png" alt="">
-                    <img src="./images/medias-imges/medium.png" alt="">
-                    <img src="./images/medias-imges/spotify.png" alt="">
-                </marquee>
-            </div>
-        </div>
-    </section>
-    <section class="section-8 my-5 py-3">
-        <div class="container">
-            <div class="align-center m-auto">
-                <h2 class="fw-bold fs-1">Testimonial</h2>
-                <p class="col-12 col-lg-6 mt-3 mx-auto text-black-50">Working with this team was a fantastic experience.
-                    Their attention to detail and commitment to quality exceeded our expectations.</p>
-                <p class="col-12 col-lg-10 mt-5 mx-auto fw-bold">“From the initial consultation to the final delivery,
-                    every step was handled professionally. The end result was a product that not only met our needs but
-                    also impressed our stakeholders. Highly recommended!”</p>
-                <p class="fw-bold">Esther Howard</p>
-                <p class="fs-6 text-black-50">Managing Director, ABC Company</p>
-            </div>
-            <div id="Contact"
-                class="px-2 px-md-3 px-lg-5 d-flex flex-column-reverse flex-lg-row gap-5 align-items-center justify-content-between py-5 mt-5 shadow-lg border-radius">
-                <div class="col-12 col-lg-5">
-                    <h2 class="text-center text-lg-start fw-bold">Let’s discuss your Project</h2>
-                    <p class="text-black-50 text-center text-lg-start my-4">I'm available for freelance work. Drop me a
-                        line if you have a project you
-                        think I'd be a good fit for.</p>
-                    <div class="col-12 col-lg-9 d-flex flex-column flex-md-row flex-lg-column gap-2 gap-md-0 gap-lg-2 flex-wrap">
-                        <div class="d-flex align-items-center hover-shadow border-radius-10">
-                            <button
-                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
-                                <i class="ri-map-pin-2-fill"></i>
-                            </button>
-                            <div class="lh-1">
-                                <p class="fs-6 text-black-50">Address:
-                                <p class="fs-6 fw-bold">New Mexico, 31134</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center hover-shadow border-radius-10">
-                            <button
-                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
-                                <i class="ri-mail-fill"></i>
-                            </button>
-                            <div class="lh-1">
-                                <p class="fs-6 text-black-50">My Email:</p>
-                                <p class="fs-6 fw-bold">mymail@mail.com</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center hover-shadow border-radius-10">
-                            <button
-                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
-                                <i class="ri-phone-fill"></i>
-                            </button>
-                            <div class="lh-1">
-                                <p class="fs-6 text-black-50">Call Me Now:</p>
-                                <p class="fs-6 fw-bold">00-123 00000</p>
-                            </div>
-                        </div>
-                        <div class="my-4 d-flex m-auto">
-                            <button class="py-2 rounded-3 border-0 fs-4">
-                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
-                                    href="">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                            </button>
-                            <button class="py-2 rounded-3 border-0 fs-4">
-                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
-                                    href="">
-                                    <i class="ri-global-line"></i>
-                                </a>
-                            </button>
-                            <button class="py-2 rounded-3 border-0 fs-4">
-                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
-                                    href="">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </button>
-                            <button class="py-2 rounded-3 border-0 fs-4">
-                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
-                                    href="">
-                                    <i class="ri-linkedin-box-fill"></i>
-                                </a>
-                            </button>
-                            <button class="py-2 rounded-3 border-0 fs-4">
-                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
-                                    href="">
-                                    <i class="ri-behance-fill"></i>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <form class="col-12 col-lg-6 d-flex flex-column gap-4 px-0 px-md-3 px-lg-0">
-                    <p class="text-black-50 text-center text-lg-start col-11">I'm always open to discussing product
-                        design work or partnership opportunities.</p>
-                    <div class="">
-                        <input type="text" placeholder="Name*">
-                        <br>
-                        <input type="email" placeholder="Email*">
-                        <br>
-                        <input type="text" placeholder="Location*">
-                        <br>
-                        <input class="col-4" type="text" placeholder="Budget*">
-                        <input class="col-7 ms-3" type="text" placeholder="Subject*">
-                        <br>
-                        <input type="text" placeholder="Message*">
-                    </div>
-                    <button
-                        class="col-5 col-md-4 my-4 px-3 py-2 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
-                        <a class="text-decoration-none text-white" href="">Submit <i class="ri-send-plane-fill"></i>
-                        </a></button>
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER START  -->
-
-    <footer class="contanier w-100 pt-5 pb-3 text-light start-50 z-n1">
-        <div class="container-lg py-2 pt-5">
-            <div class="footer-nav d-flex justify-content-between flex-lg-row flex-column align-items-center gap-4">
-                <div class="logo d-flex align-items-center justify-content-between my-xl-0 my-1">
-                    <h3 class="rounded-circle px-3 py-2 purple-background text-light">B</h3>
-                    <h2 class="ms-2">Brooklyn</h2>
+        <!-- ══════════ CONTACT ══════════ -->
+        <section class="contact section" id="contact">
+            <div class="container-wide">
+                <div class="section-head">
+                    <span class="section-num">07</span>
+                    <span class="section-tag">Contact</span>
                 </div>
-                <div class="links my-xl-0 my-1 d-flex flex-xl-row flex-wrap justify-content-center gap-3">
-                    <a class="mx-1 text-light text-decoration-none" href="#Home">Home</a>
-                    <a class="mx-1 text-light text-decoration-none" href="#About">About</a>
-                    <a class="mx-1 text-light text-decoration-none" href="#Process">Process</a>
-                    <a class="mx-1 text-light text-decoration-none" href="#Portfolio">Portfolio</a>
-                    <a class="mx-1 text-light text-decoration-none" href="#Blog">Blog</a>
-                    <a class="mx-1 text-light text-decoration-none" href="#Services">Services</a>
-                    <a class="mx-1 text-light text-decoration-none" href="#Contact">Contact</a>
-                </div>
-                <div class="">
-                    <p class="my-xl-0 my-1">Copyright © 2025 Picto.</p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section-title reveal-words">Let's discuss your <em>project</em>.</h2>
+                        <p class="reveal-fade">I'm available for freelance work. Drop a line if you have a project you think I'd be a good fit for.</p>
+                        <ul class="contact-list">
+                            <li class="reveal-fade"><span class="ci-icon"><i class="ri-map-pin-2-fill"></i></span><div><span class="ci-label">Address</span><span class="ci-value">New Mexico, 31134</span></div></li>
+                            <li class="reveal-fade"><span class="ci-icon"><i class="ri-mail-fill"></i></span><div><span class="ci-label">Email</span><a class="ci-value" href="mailto:hello@brooklyngilbert.com">hello@brooklyngilbert.com</a></div></li>
+                            <li class="reveal-fade"><span class="ci-icon"><i class="ri-phone-fill"></i></span><div><span class="ci-label">Call me now</span><a class="ci-value" href="tel:0012300000">00-123 00000</a></div></li>
+                        </ul>
+                        <div class="socials">
+                            <a href="#" class="social magnetic" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" class="social magnetic" aria-label="Website"><i class="ri-global-line"></i></a>
+                            <a href="#" class="social magnetic" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                            <a href="#" class="social magnetic" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="#" class="social magnetic" aria-label="Behance"><i class="ri-behance-fill"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="field"><input type="text" id="fName" required placeholder=" "><label for="fName">Your Name *</label></div>
+                            <div class="field"><input type="email" id="fEmail" required placeholder=" "><label for="fEmail">Email Address *</label></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="field"><input type="text" id="fBudget" placeholder=" "><label for="fBudget">Budget (optional)</label></div>
+                            <div class="field"><input type="text" id="fSubject" required placeholder=" "><label for="fSubject">Subject *</label></div>
+                        </div>
+                        <div class="field field-area"><textarea id="fMsg" rows="5" required placeholder=" "></textarea><label for="fMsg">Tell me about your project *</label></div>
+                        <button type="submit" class="btn btn-solid btn-submit magnetic" id="submitBtn"><span class="submit-text">Send Message</span><i class="ri-send-plane-fill"></i></button>
+                        <p class="form-status" id="formStatus"></p>
+                    </form>
                 </div>
             </div>
-            <p class="text-center mt-xl-5 mt-2">Developed with ❤️ by <a class="text-light fw-bold" href="#">Bilal
-                    Ahmed</a></p>
-        </div>
-    </footer>
+        </section>
 
-    <!-- FOOTER END  -->
+        <!-- ══════════ FOOTER ══════════ -->
+        <footer class="footer">
+            <div class="container-wide">
+                <a href="#contact" data-scroll class="footer-big" data-cursor="Say Hello">
+                    <span class="fb-line"><span>LET'S</span></span>
+                    <span class="fb-line fb-right"><span>TALK<i class="ri-arrow-right-up-line"></i></span></span>
+                </a>
+                <div class="footer-bar">
+                    <div class="footer-logo"><span class="nav-logo-mark">B</span><span class="nav-logo-text">Brooklyn<em>Gilbert</em></span></div>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-scroll>Home</a></li>
+                        <li><a href="#about" data-scroll>About</a></li>
+                        <li><a href="#work" data-scroll>Work</a></li>
+                        <li><a href="#journal" data-scroll>Journal</a></li>
+                        <li><a href="#contact" data-scroll>Contact</a></li>
+                    </ul>
+                    <div class="footer-time"><span>London, UK</span><span id="localTime">--:--:--</span></div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Brooklyn Gilbert. All rights reserved.</p>
+                    <p>Designed &amp; built with <i class="ri-heart-fill"></i> by Bilal Ahmed</p>
+                    <button class="to-top magnetic" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+                </div>
+            </div>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>
